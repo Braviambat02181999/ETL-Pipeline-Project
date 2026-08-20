@@ -1,51 +1,43 @@
-E-Commerce ETL Data Pipeline \& Analytics Dashboard
+# 🛒 E-Commerce ETL Data Pipeline & Analytics Dashboard
 
+![ETL Pipeline Status](https://github.com/Braviambat02181999/ETL-Pipeline-Project/actions/workflows/etl_schedule.yml/badge.svg)
 
+Proyek *End-to-End Data Engineering* untuk menarik data e-commerce dari REST API, mengolahnya menggunakan Python & Pandas, menyimpannya secara otomatis ke Cloud Database PostgreSQL (Supabase) via GitHub Actions, serta memvisualisasikannya secara interaktif di Google Looker Studio.
 
-Project End-to-End Data Engineering untuk menarik data e-commerce dari REST API, mengolahnya menggunakan Python \& Pandas, menyimpan data ke Cloud Database PostgreSQL (Supabase), dan memvisualisasikannya di Looker Studio.
+---
 
+## 🛠️ Tech Stack & Tools
 
+* **Language:** Python 3.12
+* **Data Transformation:** Pandas
+* **Database Connection:** SQLAlchemy & Psycopg2
+* **Cloud Database:** Supabase (PostgreSQL)
+* **Automation / CI-CD:** GitHub Actions
+* **Visualization:** Google Looker Studio
+* **Data Source:** DummyJSON REST API
 
- Tech Stack & Tools
+---
 
-Language: Python 3.12
+## 🏗️ Pipeline Architecture
 
-Data Transformation: Pandas
+1. **Extract:** Fetch 100 data produk dari REST API (`https://dummyjson.com/products`).
+2. **Transform:** Pembersihan data, seleksi & restrukturisasi kolom, serta penambahan *timestamp* penarikan data menggunakan Pandas.
+3. **Load:** Pengunggahan data otomatis ke tabel `store_sales_data` di Supabase PostgreSQL.
+4. **Automation:** Eksekusi otomatis terjadwal menggunakan GitHub Actions (*Cron Schedule*).
+5. **Visualize:** Koneksi live dari Supabase ke Looker Studio untuk memantau KPI bisnis (*Total Produk, Stok, Rata-rata Harga & Rating*).
 
-Database Connection:SQLAlchemy \& Psycopg2
+---
 
-Database Cloud: Supabase (PostgreSQL)
+## 🔗 Link Akses
 
-Visualization: Google Looker Studio
+* 💻 **GitHub Repository:** [https://github.com/Braviambat02181999/ETL-Pipeline-Project](https://github.com/Braviambat02181999/ETL-Pipeline-Project)
+* 📊 **Interactive Dashboard:** [Google Looker Studio Dashboard](https://datastudio.google.com/reporting/2f789424-04a6-48be-8a06-8d43d5e1e3ba)
 
-Data Source: DummyJSON REST API
+---
 
+## 🚀 Cara Menjalankan Script Secara Lokal
 
-
- Pipeline Architecture
-
-1. Extract:   Fetch 100 data produk dari API `https://dummyjson.com/products`.
-
-2. Transform: Pembersihan data, restrukturisasi kolom, dan penambahan timestamp menggunakan `pandas`.
-
-3. Load: Unggah data otomatis ke tabel `store\_sales\_data` di Supabase.
-
-4. Visualize: Koneksi langsung dari Supabase ke Looker Studio untuk pemantauan KPI bisnis (Total Produk, Stok, Rata-rata Harga \& Rating).
-
-
-
-Dashboard
-
-
-
-
- Cara Menjalankan Script
-
-1. Clone repository ini:
-
-&#x20;  ```bash
-
-&#x20;  git clone <URL\_REPOSITORY\_GITHUB\_ANDA>
-
-&#x20;  cd ecommerce
-
+1. **Clone repository ini:**
+   ```bash
+   git clone [https://github.com/Braviambat02181999/ETL-Pipeline-Project.git](https://github.com/Braviambat02181999/ETL-Pipeline-Project.git)
+   cd ETL-Pipeline-Project
